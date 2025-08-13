@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elect-Info — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <a href="index.html" class="logo"> Elect-Info</a>
+    </div>
+    <nav class="main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- PAGE SPECIFIC CONTENT GOES HERE --><h1 class="page-title">Contactez-nous</h1>
+
+<section class="contact-info">
+  <div class="info-item">
+    <h3>Adresse</h3>
+    <p> Deido Grand Moulin, Douala, Cameroun</p>
+  </div>
+  <div class="info-item">
+    <h3>Téléphone</h3>
+    <p>+237 6 95 11 07 70</p>
+  </div>
+  <div class="info-item">
+    <h3>Email</h3>
+    <p>elecinfo2021@gmail.com</p>
+  </div>
+</section>
+
+<section class="contact-main">
+  <form class="contact-form" action="#" method="POST" novalidate>
+    <h2>Envoyez-nous un message</h2>
+    <label for="name">Nom complet</label>
+    <input type="text" id="name" name="name" placeholder="Votre nom" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="votre.email@example.com" required />
+
+    <label for="subject">Sujet</label>
+    <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" placeholder="Votre message ici..." required></textarea>
+
+    <button type="submit" class="btn-primary">Envoyer</button>
+  </form>
+
+  <div class="map-placeholder">
+    <h2>Notre localisation</h2>
+    <div class="map-box">
+      <!-- Replace with actual embedded map or iframe later -->
+      <img src="https://via.placeholder.com/480x320?text=Carte+de+localisation" alt="Carte de localisation" />
+    </div>
+  </div>
+</section>
+<!-- AI Chat Support -->
+<section class="chat-support">
+  <h2>Vous avez des questions ? Discutez avec notre assistant AI</h2>
+  <button id="chat-toggle" class="btn-secondary">Ouvrir le chat</button>
+
+  <div id="chat-box" class="chat-box hidden">
+    <div class="chat-header">
+      <span>Assistant Virtuel</span>
+      <button id="chat-close" aria-label="Fermer le chat">&times;</button>
+    </div>
+    <div id="chat-messages" class="chat-messages">
+      <div class="chat-message bot">Bonjour ! Posez-moi vos questions, je suis là pour vous aider.</div>
+    </div>
+    <form id="chat-form" class="chat-form">
+      <input type="text" id="chat-input" placeholder="Écrivez votre message..." autocomplete="off" required />
+      <button type="submit" class="btn-primary">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Elect-Info-Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Inject current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+  const chatToggleBtn = document.getElementById('chat-toggle');
+  const chatCloseBtn = document.getElementById('chat-close');
+  const chatBox = document.getElementById('chat-box');
+  const chatForm = document.getElementById('chat-form');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatInput = document.getElementById('chat-input');
+
+  chatToggleBtn.addEventListener('click', () => {
+    chatBox.classList.toggle('hidden');
+  });
+
+  chatCloseBtn.addEventListener('click', () => {
+    chatBox.classList.add('hidden');
+  });
+
+  chatForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const userMsg = chatInput.value.trim();
+    if (!userMsg) return;
+
+    // Add user message to chat
+    const userMessageElem = document.createElement('div');
+    userMessageElem.classList.add('chat-message', 'user');
+    userMessageElem.textContent = userMsg;
+    chatMessages.appendChild(userMessageElem);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    chatInput.value = '';
+    chatInput.focus();
+
+    // Simulate AI response (replace this with real API calls later)
+    setTimeout(() => {
+      const botMessageElem = document.createElement('div');
+      botMessageElem.classList.add('chat-message', 'bot');
+
+      // Simple canned response example
+      const lower = userMsg.toLowerCase();
+      if (lower.includes('horaires')) {
+        botMessageElem.textContent = "Nos horaires d'ouverture sont de 8h à 18h du lundi au vendredi.";
+      } else if (lower.includes('prix') || lower.includes('tarif')) {
+        botMessageElem.textContent = "Pour un devis personnalisé, veuillez nous contacter via le formulaire ou par téléphone.";
+      } else {
+        botMessageElem.textContent = "Merci pour votre question ! Je vais transmettre cela à notre équipe, ou vous pouvez nous contacter directement.";
+      }
+
+      chatMessages.appendChild(botMessageElem);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 1000);
+  });
+</script>
+
+</body>
+</html>
