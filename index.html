@@ -1,204 +1,93 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elect-Info — Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Solutions Pro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
-    <div class="brand">
-      <a href="index.html" class="logo"> Elect-Info</a>
-    </div>
-    <nav class="main">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Solutions Pro</div>
+    <nav>
+      <a href="index.html">Accueil</a>
       <a href="services.html">Services</a>
+      <a href="about.html">À propos</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main class="container">
-    <!-- PAGE SPECIFIC CONTENT GOES HERE --><!-- HERO -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>Protégez, Installez, Innovez.</h1>
-    <p>Votre partenaire de confiance en solutions de sécurité, installations électriques et technologies modernes. Nous combinons expertise et innovation pour protéger ce qui compte le plus.</p>
-    <div class="hero-buttons">
-      <a href="services.html" class="btn-primary">Découvrir nos services</a>
-      <a href="contact.html" class="btn-secondary">Demander un devis</a>
-    </div>
-  </div>
-  <div class="hero-image">
-    <img src="Assets.png/logo.jpg"  alt="Image entreprise">
-  </div>
-</section>
-
-<!-- ABOUT PREVIEW -->
-<section class="about-preview">
-  <div class="about-text">
-    <h2>À propos de nous</h2>
-    <p>Depuis notre création, nous mettons en place des solutions fiables et performantes pour répondre aux besoins des particuliers, entreprises et industries. Notre équipe d'experts assure des interventions rapides, un suivi personnalisé et une qualité irréprochable.</p>
-    <a href="about.html" class="link-more">En savoir plus →</a>
-  </div>
-  <div class="about-image">
-    <img src="https://via.placeholder.com/450x300" alt="Équipe de l'entreprise">
-  </div>
-</section>
-
-<!-- SERVICES PREVIEW -->
-<section class="services-preview">
-  <h2>Nos solutions clés</h2>
-  <div class="services-preview-grid">
-    <div class="service-card">
-      <div class="icon-circle gradient-pink">
-        <!-- Shield Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Protégez, Installez, Innovez.</h1>
+      <p>Votre partenaire de confiance en solutions de sécurité, installations électriques et technologies modernes. Nous combinons expertise et innovation pour protéger ce qui compte le plus.</p>
+      <div class="hero-buttons">
+        <a href="services.html" class="btn-primary">Découvrir nos services</a>
+        <a href="contact.html" class="btn-secondary">Demander un devis</a>
       </div>
-      <h3>Sécurité & Surveillance</h3>
-      <p>Protection complète avec systèmes de vidéosurveillance et contrôle d'accès.</p>
     </div>
-    <div class="service-card">
-      <div class="icon-circle gradient-purple">
-        <!-- Bolt Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    <div class="hero-image">
+      <!-- Shield icon for hero -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="220" width="220" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <h2>Nos services</h2>
+    <div class="service-list">
+
+      <div class="service-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="80" width="80" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75V19.5A1.5 1.5 0 006 21h12a1.5 1.5 0 001.5-1.5V9.75M9 21v-6h6v6"/>
+        </svg>
+        <h3>Installations électriques</h3>
+        <p>Des installations conformes, sécurisées et durables pour vos besoins résidentiels et industriels.</p>
       </div>
-      <h3>Installations Électriques</h3>
-      <p>Solutions électriques pour bâtiments, industries et projets solaires.</p>
-    </div>
-    <div class="service-card">
-      <div class="icon-circle gradient-cyan">
-        <!-- Cog Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v2m0 12v2m8-8h2M4 12H2m15.364-6.364l1.414 1.414M6.343 17.657l-1.414 1.414m0-13.071l1.414 1.414M17.657 17.657l1.414-1.414"/></svg>
+
+      <div class="service-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="80" width="80" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.75 10.5V6a3.75 3.75 0 00-7.5 0v4.5m-3 0h13.5M4.5 10.5V18a2.25 2.25 0 002.25 2.25h10.5A2.25 2.25 0 0019.5 18v-7.5"/>
+        </svg>
+        <h3>Systèmes de sécurité</h3>
+        <p>Alarmes, caméras et solutions de surveillance pour protéger vos biens et vos proches.</p>
       </div>
-      <h3>Maintenance & Domotique</h3>
-      <p>Entretien, automatisation et optimisation de vos installations.</p>
+
+      <div class="service-item">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="80" width="80" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.75 6h16.5M3.75 12h16.5M3.75 18h16.5"/>
+        </svg>
+        <h3>Technologies connectées</h3>
+        <p>Domotique, automatisation et solutions intelligentes pour améliorer votre confort.</p>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA BANNER -->
-<section class="cta-banner">
-  <h2>Besoin d'une solution sur mesure ?</h2>
-  <p>Contactez notre équipe pour discuter de vos besoins et obtenir un devis personnalisé.</p>
-  <a href="contact.html" class="btn-primary">Nous contacter</a>
-</section>
+  <!-- ABOUT PREVIEW -->
+  <section class="about-preview">
+    <div class="about-text">
+      <h2>À propos de nous</h2>
+      <p>Depuis notre création, nous mettons en place des solutions fiables et performantes pour répondre aux besoins des particuliers, entreprises et industries. Notre équipe d'experts assure des interventions rapides, un suivi personnalisé et une qualité irréprochable.</p>
+      <a href="about.html" class="link-more">En savoir plus →</a>
+    </div>
+    <div class="about-image">
+      <!-- People/team icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="200" width="200" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m7-4.13a4 4 0 100-8 4 4 0 000 8z"/>
+      </svg>
+    </div>
+  </section>
 
-
-  </main>
-
+  <!-- FOOTER -->
   <footer>
-    <p>© <span id="year"></span> Elect-Info. Tous droits réservés.</p>
+    <p>&copy; 2025 Solutions Pro. Tous droits réservés.</p>
   </footer>
 
-  <script>
-    // Inject current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elect-Info — Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="nav">
-    <div class="brand">
-      <a href="index.html" class="logo"> Elect-Info</a>
-    </div>
-    <nav class="main">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <!-- PAGE SPECIFIC CONTENT GOES HERE --><!-- HERO -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>Protégez, Installez, Innovez.</h1>
-    <p>Votre partenaire de confiance en solutions de sécurité, installations électriques et technologies modernes. Nous combinons expertise et innovation pour protéger ce qui compte le plus.</p>
-    <div class="hero-buttons">
-      <a href="services.html" class="btn-primary">Découvrir nos services</a>
-      <a href="contact.html" class="btn-secondary">Demander un devis</a>
-    </div>
-  </div>
-  <div class="hero-image">
-    <img src="Assets.png/logo.jpg"  alt="Image entreprise">
-  </div>
-</section>
-
-<!-- ABOUT PREVIEW -->
-<section class="about-preview">
-  <div class="about-text">
-    <h2>À propos de nous</h2>
-    <p>Depuis notre création, nous mettons en place des solutions fiables et performantes pour répondre aux besoins des particuliers, entreprises et industries. Notre équipe d'experts assure des interventions rapides, un suivi personnalisé et une qualité irréprochable.</p>
-    <a href="about.html" class="link-more">En savoir plus →</a>
-  </div>
-  <div class="about-image">
-    <img src="https://via.placeholder.com/450x300" alt="Équipe de l'entreprise">
-  </div>
-</section>
-
-<!-- SERVICES PREVIEW -->
-<section class="services-preview">
-  <h2>Nos solutions clés</h2>
-  <div class="services-preview-grid">
-    <div class="service-card">
-      <div class="icon-circle gradient-pink">
-        <!-- Shield Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
-      <h3>Sécurité & Surveillance</h3>
-      <p>Protection complète avec systèmes de vidéosurveillance et contrôle d'accès.</p>
-    </div>
-    <div class="service-card">
-      <div class="icon-circle gradient-purple">
-        <!-- Bolt Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-      </div>
-      <h3>Installations Électriques</h3>
-      <p>Solutions électriques pour bâtiments, industries et projets solaires.</p>
-    </div>
-    <div class="service-card">
-      <div class="icon-circle gradient-cyan">
-        <!-- Cog Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v2m0 12v2m8-8h2M4 12H2m15.364-6.364l1.414 1.414M6.343 17.657l-1.414 1.414m0-13.071l1.414 1.414M17.657 17.657l1.414-1.414"/></svg>
-      </div>
-      <h3>Maintenance & Domotique</h3>
-      <p>Entretien, automatisation et optimisation de vos installations.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
-<section class="cta-banner">
-  <h2>Besoin d'une solution sur mesure ?</h2>
-  <p>Contactez notre équipe pour discuter de vos besoins et obtenir un devis personnalisé.</p>
-  <a href="contact.html" class="btn-primary">Nous contacter</a>
-</section>
-
-
-  </main>
-
-  <footer>
-    <p>© <span id="year"></span> Elect-Info. Tous droits réservés.</p>
-  </footer>
-
-  <script>
-    // Inject current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
->>>>>>> 0469fb66e23206b67fcc8b34fb67cdf5d16ffca5
 </html>
